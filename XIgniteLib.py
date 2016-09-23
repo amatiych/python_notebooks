@@ -9,7 +9,7 @@ from datetime import datetime
 
 class MarketData:
     """ Encapsulates functions for getting data out of XIgnite and Yahoo """
-    xigniteToken = "B962F03B195E4A8499577DE90B970BAF"
+    xigniteToken = "Get your own token"
 
     def get_stock_quote_by_any_id(self, ticker, idtype, eff_date):
         """
