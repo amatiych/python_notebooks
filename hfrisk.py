@@ -166,4 +166,14 @@ def convexity_analysis(tsdata, namex, namey):
     return res
 
 
+if __name__ == '__main__':
+    marketdata = pd.read_csv('data/marketdata.csv')
+    marketdata.set_index("Data",inplace=True)
+    fund = marketdata['Fund']
+    cols = marketdata.columns
+    n_cols = len(cols)
+    """ last column is regime. The other columns are returns """
+    tsdata = marketdata[cols[0:n_cols-1]]
+    factors = tsdata.iloc[:, 1:5]
+
 
